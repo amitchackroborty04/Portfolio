@@ -49,31 +49,23 @@ const Aboutme = () => {
                   Bangladeshi.
                 </h5>
               </Flex>
-              <Flex className="gap-x-4  mt-2 flex-wrap lg:flex-nowrap">
+              <Flex className="gap-x-4  mt-2 flex-wrap lg:flex-nowrap gap-y-3">
                 <AboutItem name="Education" />
                 <div>
-                  <h5 className="text-sm lg:text-base font-normal text-[#1C1E53] w-[400px]">
+                  <h5 className="text-sm lg:text-base font-normal text-[#1C1E53] ">
                     BBA 4th year (Running) from MAHIPUR HAJI MOHSIN GOVT.
                     COLLEGE.
                   </h5>
-                  <h5 className="text-sm lg:text-base font-normal text-[#1C1E53] max-w-[300px] mt-1">
+                  <h5 className="text-sm lg:text-base font-normal text-[#1C1E53]  mt-1">
                     HSC in Business studies group from FULBARI GOVT. COLLEGE in
                     2019.
                   </h5>
-                  <h5 className="text-sm lg:text-base font-normal text-[#1C1E53] w-full lg:w-[400px] mt-1">
+                  <h5 className="text-sm lg:text-base font-normal text-[#1C1E53]  mt-1">
                     SSC in Science group from Khayerbari High School in 2019 .
                   </h5>
                 </div>
               </Flex>
-              {/* <Flex className="gap-x-4 items-center mt-2">
-                <AboutItem name="Education" />
-                <div>
-                  <h5 className="text-xl font-normal text-[#1C1E53]">
-                     BBA 4th year (Running) from MAHIPUR HAJI MOHSIN GOVT.
-                    COLLEGE
-                  </h5>
-                </div>
-              </Flex> */}
+           
             </div>
           </div>
         </Flex>
