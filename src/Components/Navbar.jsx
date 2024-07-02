@@ -33,7 +33,7 @@ const Navbar = () => {
             <ul
               className={`flex flex-col lg:flex-row gap-x-10 absolute top-0   bg-slate-200 z-50 lg:bg-transparent  lg:static ${
                 menu ? " right-[0] " : " right-[-100%]"
-              } w-[50%]  lg:w-full h-screen lg:h-auto py-10 lg:py-0 px-7 lg:px-0 gap-y-7 duration-500 cursor-pointer !fixed lg:!static    `}
+              } w-[70%]  lg:w-full h-screen lg:h-auto py-10 lg:py-0 px-7 lg:px-0 gap-y-7 duration-500 cursor-pointer !fixed lg:!static    `}
             >
               <RxCross2
                 onClick={handlemenu}

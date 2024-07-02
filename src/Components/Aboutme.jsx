@@ -11,7 +11,7 @@ const Aboutme = () => {
         <Flex className=" justify-between flex-wrap lg:flex-nowrap gap-y-10">
           <div data-aos="fade-up" data-aos-duration="2000" className="w-full lg:w-[48%]">
             <Title name="Overview" />
-            <p className="text-base lg:text-[20px] font-normal text-[#1C1E53] text-justify mt-[32px]">
+            <p className="text-base lg:text-[20px] font-normal text-[#1C1E53] text-justify mt-[32px] leading-9">
               I am a skilled software developer with experience in JavaScript
               and proficiency in frameworks such as React, Node.js, Express.js,
               and MongoDB. I am a quick learner and adept at solving real-world
@@ -25,33 +25,36 @@ const Aboutme = () => {
           <div data-aos="fade-up" data-aos-duration="2000" className="w-full lg:w-[48%]">
             <Title name="About me" />
             <div className="mt-[32px]">
-              <Flex className="gap-x-4 items-center">
+              <Flex className="gap-x-3 items-center">
                 <AboutItem name="Name" />
                 <h5 className="text-sm lg:text-xl font-normal text-[#1C1E53]">
                   Amit Chackroborty.
                 </h5>
               </Flex>
-              <Flex className="gap-x-4 items-center mt-2">
+              <Flex className="gap-x-3 items-center mt-2">
                 <AboutItem name="Email" />
                 <h5 className="text-sm lg:text-xl font-normal text-[#1C1E53 ]">
                   amitck803@gmail.com.
                 </h5>
               </Flex>
-              <Flex className="gap-x-4 items-center mt-2">
+              <Flex className="gap-x-3 items-center mt-2">
                 <AboutItem name="Phon" />
                 <h5 className="text-sm lg:text-xl font-normal text-[#1C1E53]">
                   0177413094.
                 </h5>
               </Flex>
-              <Flex className="gap-x-4 items-center mt-2">
+              <Flex className="gap-x-3 items-center mt-2">
                 <AboutItem name="Nationality" />
                 <h5 className="text-sm lg:text-xl font-normal text-[#1C1E53]">
                   Bangladeshi.
                 </h5>
               </Flex>
-              <Flex className="gap-x-4  mt-2 flex-wrap lg:flex-nowrap gap-y-3">
+              <Flex className="gap-x-3  mt-2 flex-col lg:flex-row gap-y-3">
+                <div className="w-full lg:w-[20%] ">
+
                 <AboutItem name="Education" />
-                <div>
+                </div>
+                <div className="w-full lg:w-[75%]">
                   <h5 className="text-sm lg:text-base font-normal text-[#1C1E53] ">
                     BBA 4th year (Running) from MAHIPUR HAJI MOHSIN GOVT.
                     COLLEGE.
