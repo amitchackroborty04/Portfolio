@@ -3,20 +3,22 @@ import Continar from "./Continar";
 import Flex from "./Flex";
 import { Link } from "react-router-dom";
 
+
 const Banner = () => {
+  
   return (
-    <section className="bg-[#F5FCFF] py-[133px]">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className="bg-[#F5FCFF] py-[133px]"
+    >
       <Continar>
         <Flex className="justify-between items-center flex-wrap lg:flex-nowrap gap-y-6">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            className="w-full lg:w-[48%] text-center lg:text-left"
-          >
+          <div className="w-full lg:w-[48%] text-center lg:text-left">
             <h4 className="text-xl font-semibold text-[#282938] text-center lg:text-left">
               Hey, I am Amit Chackroborty
             </h4>
-            <h1 className="text-[35px] lg:text-[44px] font-bold text-[#282938] mt-5 text-center lg:text-left ">
+            <h1 className="text-[25px] lg:text-[35px] font-bold text-[#282938] mt-5 text-center lg:text-left ">
               I am a MERN stack developer
             </h1>
             <p className="text-base lg:text-[20px] font-normal text-[#282938] mt-5 text-center lg:text-left leading-9  ">
@@ -32,9 +34,8 @@ const Banner = () => {
               </Link>
             </div>
           </div>
-          <div  data-aos="fade-up"
-            data-aos-duration="2000" className=" wi-full lg:w-[48%] ">
-            <img src="banner.png" alt="banner" />
+          <div className=" wi-full lg:w-[48%]   ">
+            <img src="amit.png" alt="banner" />
           </div>
         </Flex>
       </Continar>

@@ -5,16 +5,28 @@ import { Link } from "react-router-dom";
 import { RiMenuLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
+
 const Navbar = () => {
+
   let [menu, setMemu] = useState(false);
 
   let handlemenu = () => {
     setMemu(!menu);
   };
+  let handlescrol = () => {
+    window.scroll({
+      top: 4400,
+
+      behavior: "smooth",
+    });
+    setMemu(false);
+  };
+
+ 
   return (
-    <nav className="py-5 ">
+    <nav className="py-4 fixed w-full z-50 bg-slate-100 ">
       <Continar>
-        <Flex className=" justify-between items-center">
+        <Flex className=" justify-between items-center ">
           <div className=" relative">
             <Link>
               <h1 className="text-xl lg:text-3xl font-bold text-[#1edfdf] cursor-pointer select-none">
@@ -42,7 +54,10 @@ const Navbar = () => {
               <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
                 Home
               </li>
-              <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
+              <li
+                onClick={handlescrol}
+                className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200"
+              >
                 Portfolio
               </li>
               <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
