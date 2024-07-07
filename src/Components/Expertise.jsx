@@ -17,7 +17,7 @@ const Expertise = () => {
             data-aos-duration="2000"
             className="w-[45%] lg:w-[23%] "
           >
-            <ExpertiseItem title="Web Developer" src="newimg.png" />
+            <ExpertiseItem title="Frontend Developer" src="newimg.png" />
           </div>
           <div
             data-aos="flip-left"

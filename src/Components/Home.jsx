@@ -5,6 +5,8 @@ import Expertise from './Expertise'
 import Aboutme from './Aboutme'
 import MyPortfolio from './MyPortfolio'
 import Customertestimonials from './Customertestimonials'
+import Skill from './Skill'
+import Contact from './Contact'
 
 
 const Home = () => {
@@ -13,8 +15,10 @@ const Home = () => {
       <Banner/>
       <Expertise/>
       <Aboutme/>
+      <Skill/>
       <MyPortfolio/>
-      <Customertestimonials/>
+      {/* <Customertestimonials/> */}
+      <Contact/>
     </div>
   )
 }

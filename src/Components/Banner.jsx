@@ -34,8 +34,10 @@ const Banner = () => {
               </Link>
             </div>
           </div>
-          <div className=" wi-full lg:w-[48%]   ">
+          <div className=" w-full lg:w-[48%] flex justify-center ">
+            <div >
             <img src="amit.png" alt="banner" />
+            </div>
           </div>
         </Flex>
       </Continar>

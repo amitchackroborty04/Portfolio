@@ -5,24 +5,33 @@ import { Link } from "react-router-dom";
 import { RiMenuLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
-
 const Navbar = () => {
-
   let [menu, setMemu] = useState(false);
 
   let handlemenu = () => {
     setMemu(!menu);
   };
   let handlescrol = () => {
-    window.scroll({
-      top: 4400,
+    if (window.innerWidth >=1024) {
+      window.scroll({
+        top: 2750,
+        behavior: "smooth",
+      });
+    } else if(window.innerWidth >=768){
+      window.scroll({
+        top: 100,
+        behavior: "smooth",
+      });
+    } else {
+      window.scroll({
+        top: 5110,
+        behavior: "smooth",
+      });
+    }
 
-      behavior: "smooth",
-    });
     setMemu(false);
   };
 
- 
   return (
     <nav className="py-4 fixed w-full z-50 bg-slate-100 ">
       <Continar>
@@ -38,7 +47,7 @@ const Navbar = () => {
           <span>
             <RiMenuLine
               onClick={handlemenu}
-              className="text-2xl lg:hidden cursor-pointer absolute top-7 right-2"
+              className="text-2xl lg:hidden cursor-pointer absolute top-[22px] right-2"
             />
           </span>
           <div>
@@ -49,7 +58,7 @@ const Navbar = () => {
             >
               <RxCross2
                 onClick={handlemenu}
-                className="text-2xl lg:hidden cursor-pointer absolute top-7 right-2 bg-white rounded-full"
+                className="text-2xl lg:hidden cursor-pointer absolute top-[22px] right-2 bg-white rounded-full"
               />
               <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
                 Home

@@ -26,7 +26,7 @@ const MyPortfolio = () => {
           </div>
           </Link>
         </Flex>
-        <Flex className=" justify-between mt-[106px] flex-wrap lg:flex-nowrap gap-y-10">
+        <Flex className=" justify-between mt-[60px] flex-wrap lg:flex-nowrap gap-y-10">
           <div className="w-full md:w-[45%] lg:w-[32%]">
             <PortfoliouItem
               projectTitle="Oribi"
