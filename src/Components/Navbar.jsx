@@ -11,15 +11,42 @@ const Navbar = () => {
   let handlemenu = () => {
     setMemu(!menu);
   };
+  let hadlaeHome = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+    setMemu(false);
+  };
   let handlescrol = () => {
-    if (window.innerWidth >=1024) {
+    if (window.innerWidth >= 1024) {
       window.scroll({
         top: 2750,
         behavior: "smooth",
       });
-    } else if(window.innerWidth >=768){
+    } else if (window.innerWidth >= 768) {
       window.scroll({
-        top: 100,
+        top: 4130,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 736) {
+      window.scroll({
+        top: 4850,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 734) {
+      window.scroll({
+        top: 4840,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 667) {
+      window.scroll({
+        top: 4880,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 414) {
+      window.scroll({
+        top: 5080,
         behavior: "smooth",
       });
     } else {
@@ -31,6 +58,88 @@ const Navbar = () => {
 
     setMemu(false);
   };
+
+  let handeabout = () => {
+    if (window.innerWidth >= 1024) {
+      window.scroll({
+        top: 1200,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 768) {
+      window.scroll({
+        top: 1990,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 736) {
+      window.scroll({
+        top: 1990,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 734) {
+      window.scroll({
+        top: 2000,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 667) {
+      window.scroll({
+        top: 2030,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 414) {
+      window.scroll({
+        top: 2160,
+        behavior: "smooth",
+      });
+    } else {
+      window.scroll({
+        top: 2200,
+        behavior: "smooth",
+      });
+    }
+
+    setMemu(false);
+  };
+
+  let handlecontact=()=>{
+    if (window.innerWidth >= 1024) {
+      window.scroll({
+        top: 3400,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 768) {
+      window.scroll({
+        top: 6900,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 736) {
+      window.scroll({
+        top: 6380,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 734) {
+      window.scroll({
+        top: 6380,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 667) {
+      window.scroll({
+        top: 6410,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 414) {
+      window.scroll({
+        top: 6680,
+        behavior: "smooth",
+      });
+    } else {
+      window.scroll({
+        top: 6700,
+        behavior: "smooth",
+      });
+    }
+
+    setMemu(false);
+  }
 
   return (
     <nav className="py-4 fixed w-full z-50 bg-slate-100 ">
@@ -60,8 +169,18 @@ const Navbar = () => {
                 onClick={handlemenu}
                 className="text-2xl lg:hidden cursor-pointer absolute top-[22px] right-2 bg-white rounded-full"
               />
-              <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
+              <li
+                onClick={hadlaeHome}
+                className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200"
+              >
                 Home
+              </li>
+
+              <li
+                onClick={handeabout}
+                className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200"
+              >
+                About me
               </li>
               <li
                 onClick={handlescrol}
@@ -69,13 +188,10 @@ const Navbar = () => {
               >
                 Portfolio
               </li>
-              <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
-                About me
-              </li>
-              <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
-                Testimonials
-              </li>
-              <li className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200">
+              <li
+                onClick={handlecontact}
+                className="text-xl font-normal text-[#1C1E53] hover:scale-95 duration-200"
+              >
                 Contact
               </li>
             </ul>
