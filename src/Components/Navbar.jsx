@@ -103,17 +103,17 @@ const Navbar = () => {
   let handlecontact=()=>{
     if (window.innerWidth >= 1024) {
       window.scroll({
-        top: 3400,
+        top: 3350,
         behavior: "smooth",
       });
     } else if (window.innerWidth >= 768) {
       window.scroll({
-        top: 6900,
+        top:7300,
         behavior: "smooth",
       });
     } else if (window.innerWidth >= 736) {
       window.scroll({
-        top: 6380,
+        top: 6300,
         behavior: "smooth",
       });
     } else if (window.innerWidth >= 734) {
@@ -156,7 +156,7 @@ const Navbar = () => {
           <span>
             <RiMenuLine
               onClick={handlemenu}
-              className="text-2xl lg:hidden cursor-pointer absolute top-[22px] right-2"
+              className="text-2xl lg:hidden cursor-pointer absolute top-[18px] right-2"
             />
           </span>
           <div>
