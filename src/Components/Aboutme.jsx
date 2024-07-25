@@ -46,7 +46,7 @@ const Aboutme = () => {
                 </h5>
               </Flex>
               <Flex className="gap-x-3 items-center mt-2">
-                <AboutItem name="Phon" />
+                <AboutItem name="Phone" />
                 <h5 className="text-sm lg:text-xl font-normal text-[#1C1E53]">
                   0177413094.
                 </h5>

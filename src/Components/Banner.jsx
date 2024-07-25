@@ -5,7 +5,46 @@ import { Link } from "react-router-dom";
 
 
 const Banner = () => {
-  
+  let handlecontact=()=>{
+    if (window.innerWidth >= 1024) {
+      window.scroll({
+        top: 3350,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 768) {
+      window.scroll({
+        top:7300,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 736) {
+      window.scroll({
+        top: 6300,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 734) {
+      window.scroll({
+        top: 6380,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 667) {
+      window.scroll({
+        top: 6410,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth >= 414) {
+      window.scroll({
+        top: 6680,
+        behavior: "smooth",
+      });
+    } else {
+      window.scroll({
+        top: 6700,
+        behavior: "smooth",
+      });
+    }
+
+    setMemu(false);
+  }
   return (
     <section
       data-aos="fade-up"
@@ -28,7 +67,9 @@ const Banner = () => {
             </p>
             <div className="">
               <Link>
-                <button className="text-sm lg:text-xl font-normal text-white bg-[#5E3BEE] border inline-block  p-3 lg:p-4  rounded-[7px] mt-6 lg:mt-[50px] hover:scale-90 duration-300 text-center  ">
+                <button 
+                onClick={handlecontact}
+                className="text-sm lg:text-xl font-normal text-white bg-[#5E3BEE] border inline-block  p-3 lg:p-4  rounded-[7px] mt-6 lg:mt-[50px] hover:scale-90 duration-300 text-center  ">
                   Get In Touch
                 </button>
               </Link>
