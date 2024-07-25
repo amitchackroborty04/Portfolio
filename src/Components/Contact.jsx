@@ -10,26 +10,52 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  let [name,setName]=useState("")
+  let [email,setEmail]=useState("")
+  let [messge,setMessge]=useState("")
+  let [error,setError]=useState("")
   const form = useRef();
+
+  let handleName=(e)=>{
+    setName(e.target.value);
+    setError("")
+  };
+
+  let handleEmail=(e)=>{
+    setEmail(e.target.value)
+    setError("")
+  };
+
+  let handleMessge=(e)=>{
+     setMessge(e.target.value)
+     setError("")
+  }
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
+    if(!name || !email || !messge){
+       setError("pleach give proper information")
+    }else{
+      emailjs
       .sendForm("service_l7agvbu", "template_3dzssvr", form.current, {
         publicKey: "xasYB_4KnWa3SlGOZ",
       })
       .then(
         () => {
           console.log("SUCCESS!");
-          toast.success("🦄 massge sent success!", {
+          toast.success(" message sent success!", {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
           });
+         document.getElementById("name").value="";
+         document.getElementById("emailinput").value="";
+         document.getElementById("messageinput").value="";
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
+    }
+    
   };
   return (
     <section className="mt-[80px]">
@@ -81,7 +107,10 @@ const Contact = () => {
               Contact me, let’s make magic together
             </h4>
             <form ref={form} onSubmit={sendEmail}>
+              <p className="text-sm text-normal text-red-600">{error}</p>
               <input
+                onChange={handleName}
+                id="name"
                 className="w-[80%] border border-[#5E3BEE] rounded-[8px] py-2 md:py-4 pl-3 mt-5 outline-none"
                 type="text"
                 name="user_name"
@@ -89,6 +118,8 @@ const Contact = () => {
               />
 
               <input
+                onChange={handleEmail}
+                id="emailinput"
                 className="w-[80%] border border-[#5E3BEE] rounded-[8px] py-2 md:py-4 pl-4 mt-3 outline-none"
                 type="email"
                 name="user_email"
@@ -96,6 +127,8 @@ const Contact = () => {
               />
 
               <textarea
+                onChange={handleMessge}
+                id="messageinput"
                 className="w-[80%] border border-[#5E3BEE] rounded-[8px] py-4 lg:py-8 pl-4 mt-3 outline-none"
                 name="message"
                 placeholder="Message"
